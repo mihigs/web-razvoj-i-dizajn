@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(29, 27, 27);
+}
+.mainContainer{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+div h1{
+    display: inline;
+}
+#numbOfGames{
+
+}
