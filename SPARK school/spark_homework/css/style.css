@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+.clear{
+    display: none;
+    clear: both;
+    content: "";
+}
+body{
+    margin: 0;
+}
+.mainContainer{
+    width: 100%;
+    height: 2400px;
+}.header{
+    background-color: white;
+    width: 100%;
+    height: 7%;
+    padding: 0 10%;
+    padding-top: 1%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.header:after{
+    content: "";
+    clear: both;
+    display: none;
+}
+.header ul{
+    padding: 0;
+    width: 45%;
+    height:100%;
+    display: inline-block;
+}
+li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 10px;
+    height: 100%;
+}
+li:hover{
+    border-bottom: 3px solid orange;
+}
+.logo{
+    background-image: url("images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    padding-top: 20px;
+    float: left;
+    margin-right: 4%;
+}
+.searchContainer{
+    float: right;
+    background-color: lightgray;
+    color: gray;
+    border: none;
+    width: 200px;
+    height: 25px;
+    border-radius: 15px;
+    padding-left: 6px;
+    margin-bottom: 6%;
+}
+.searchBar{
+    background-color: lightgray;
+    color: gray;
+    border: none;
+    width: 83%
+}
+input[type=text]:focus, textarea:focus {
+    outline: none;
+}
+#lupa{
+    background: url("images/icons-20.png") 0 0 no-repeat;
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 1% 3%;
+}
+.landing{
+    width: 100%;
+    height: 25%;
+    padding: 13% 7%;
+    background-image: url("images/poster.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.landing:after{
+    display: none;
+    content: "";
+    clear: both;
+}
+.landingText{
+    width: 30%;
+    text-align: left;
+    color: white;
+    float: left;
+
+}
+.applyButton{
+    padding-top: 3px;
+    padding-bottom: 3px;    
+    padding-left: 9px;
+    margin-top: 5px;
+    background-color: orange;
+    border-radius: 20px;
+    width: 250px;
+    height: 25px;
+    color: white;
+    font-size: 70%;
+    text-align: left;
+    border:none;
+    line-height: 150%;
+}
+.applyButton:focus{
+    outline: none;
+}
+.applyButton:hover{
+    background-color: rgb(255, 188, 62);
+}
+#sendIcon{
+    float: right;
+    margin-right: 1%;
+    height: 20px;
+    width: 20px;
+    background: url("images/icons-20.png") no-repeat 0 -20px;
+}
+.leftArrow{
+    width: 150px;
+    height: 170px;
+    background: url("images/icons-100.png") 0px 70px;
+    background-repeat: no-repeat;
+    float: left;
+}
+.leftArrow:hover{
+    background: url("images/icons-101.png") 0px 70px;
+    background-repeat: no-repeat;
+}
+.rightArrow{
+    margin-top: 70px;
+    width: 150px;
+    height: 100px;
+    background: url("images/icons-100.png") 0px -100px;
+    background-repeat: no-repeat;
+    float: right;
+}
+.rightArrow:hover{
+    background: url("images/icons-101.png") 0px -100px;
+    background-repeat: no-repeat;
+}
+.footer{
+    height: 60px;
+    padding-top: 5px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: lightgray;
+}
+.socialIcons{
+    height: 40px;
+    width: 40px;
+    background: url("images/icons-40.png");
+    background-repeat: no-repeat;
+    float: right;
+}
+#twitterIcon{
+    background-position: 0px 0px;
+}
+#instagramIcon{
+    background-position: 0px -40px;
+}
+#facebookIcon{
+    background-position: 0px -80px;
+}
+#googleIcon{
+    background-position: 0px -120px; 
+}
+.content2{
+    box-sizing: content-box;
+    overflow: hidden;
+    width: 65%;
+    height: 30%;
+    margin: auto;
+    margin-top: 5%;
+    color: darkgray;
+}
+hr{
+    margin-top: 4%;
+}
+.tekstBlok{
+    float: left;
+    width: 27%;
+    height: 80%;
+    margin: 2% 3%;
+    border-bottom: 10px solid lightgray;
+}
+.icon{
+    margin: 10% 0;
+    background-image: url("images/icons-80.png");
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+}
+#logo1{
+    background-position: 0px 0px;
+}
+#logo2{
+    background-position: 0px -80px;
+}
+#logo3{
+    background-position: 0 -160px;
+}
+.text{
+    margin-top: 10%;
+    text-align: left;
+    width: 100%;
+}
+
+.google-maps{
+    height: 40%;
+}
+iframe{
+    width: 100%;
+    height: 32%;
+    border: 0;
+}
+.subscribe-container{
+    height: 10%;
+    padding: 1% 20%;
+    padding-bottom: 6%;
+    background-color: gray;
+    color: white;
+}
+.subscribe{
+    margin-top: 2%;
+    width: 100%;
+    height: 70%;
+    background-color: whitesmoke;
+    color: gray;
+}
+.subscribe p{
+    width: 30%;
+    font-size: 95%;
+    display: inline-block;
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+.input-email{
+    float: right;
+    padding: 1%;
+    padding-left: 4%;
+    margin: 1%;
+    width: 36%;
+    height: 82%;
+    border-left: 2px solid gray;
+}
+.email{
+    margin-top: 2%;
+    width: 90%;
+    height: 50%;
+    background-color: lightgray;
+    border-radius: 100px;
+}
+.email input{
+    width: 70%;
+    height: 75%;
+    margin: 1% 4%;
+    border: 0;
+    background-color: lightgray;
+}
+.email-icon-circle{
+    border-radius: 100%;
+    background-color: orange;
+    height: 100%;
+    width: 30px;
+    float: right;
+}
+.email-icon{
+    background: url("images/icons-20.png") no-repeat 0 -20px;
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    margin-top: 7px;
+}
+.contact-container{
+    position: relative;
+    bottom: 800px;
+    width: 800px;
+    height: 250px;
+    margin: auto;
+    background-color: orange;
+    color: white;
+    padding: 15px 20px;
+}
+.contact-blocks{
+    float: left;
+    width: 31%;
+    margin: 0 1%;
+    height: 100%;
+    font-size: 80%;
+}
+.contact-blocks p{
+    display: block;
+    font-size: 80%;
+    clear: both;
+}
+#contact-us{
+
+}
+#form-input{
+    display: block;
+    width: 95%;
+    border: none;
+    margin: 1% 0; 
+}
+textarea{
+    width: 95%;
+    max-width: 95%;
+    height: 95px;
+    max-height: 95px;
+    border: none;
+}
+.star{
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: url("images/icons-40.png") no-repeat 0 -200px;
+}
+#game-comment{
+    height: 60px;
+}
+.send-button{
+    float: right;
+    width: 60%;
+}
+@font-face{
+    font-family: Roboto;
+    src: url("fonts/Roboto-Medium.ttf");
+}
