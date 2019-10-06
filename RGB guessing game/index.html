@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>RGB guessing game</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h3>THE GREAT</h3>
+            <h1>RGB(175,203,2)</h1>
+            <h3>GUESSING GAME</h3>
+        </div>
+        <div class="menu-container">
+            <button id="new-colors-button">NEW GAME</button>
+            <div class="difficulty-buttons-container">
+                <button class="difficulty-buttons" id="easy-button">EASY</button>
+                <button class="difficulty-buttons" id="hard-button">HARD</button>
+            </div>
+        </div>
+        <div class="progress-bar"></div>
+        <div class="collection-bar-container">
+            <div class="collection-bar"></div>
+            <div class="collection-bar"></div>
+            <div class="collection-bar"></div>
+        </div>
+        <div class="game-container">
+            <table>
+                <tr>
+                    <td class="square" id="no1"></td>
+                    <td class="square" id="no2"></td>
+                    <td class="square" id="no3"></td>
+                </tr>
+                <tr>
+                    <td class="square" id="no4"></td>
+                    <td class="square" id="no5"></td>
+                    <td class="square" id="no6"></td>
+                </tr>
+            </table>
+        </div>
+        <p class="score"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
