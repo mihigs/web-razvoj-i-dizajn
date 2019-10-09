@@ -1,0 +1,125 @@
+/* personal defaults */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 0;
+}
+body{
+    overflow: hidden;
+}
+input:focus{
+    outline: none;
+}
+
+/* containers */
+.main-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5% 0;
+    width: 100%;
+    height: 950px;
+    background: rgb(21, 38, 66);
+}
+
+.to-do-list{
+    position: relative;    
+}
+
+.to-do-main-container{
+    display: flex;
+    position: relative;
+    top: 44%;
+    flex-direction: column;
+    width: 450px;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+/* to-do blocks */
+.block{
+    height: 55px;
+    width: 100%;
+    border-radius: 1px;
+}
+.filler{
+    background: rgb(21, 38, 66);
+    display: block;
+}
+.to-do-header{
+    background: rgb(236, 151, 23);
+    color: white;
+    padding: 2% 5%;
+    border-top-right-radius: 15px;
+    z-index: 3;
+}
+    h2{
+        display: inline;
+    }
+    #minus-icon{
+        width: 33px;
+        height: 7px;
+        float: right;
+        margin: 15px 5px;
+    }
+
+.to-do-item{
+    position: relative;
+    background: rgb(21, 38, 66);
+    width: 100%;
+    z-index: 2;
+}
+    .item-content{
+        float: left;
+        background: white;
+        width: 85%;
+        height: 100%;
+        font-size: 130%;
+        padding: 2% 13%;
+    }
+    .item-delete-hover{
+        float: right;
+        width: 15%;
+        height: 55px;
+        background: white;
+        z-index: 2;
+    }
+    .delete-icon{
+        margin: auto;
+        margin-top: 17px;
+        height: 19px;
+        width: 17px;
+        background: url("trashcan-delete.png");
+        background-size: cover;
+        z-index: 3;
+    }
+.to-do-input{
+    position: absolute;
+    top: 0;
+    background: rgb(236, 151, 23);
+    z-index: 1;
+}
+    .input-form{
+        background-color: rgba(0,0,0,0);
+        height: 70%;
+        margin: 2% 5%;
+        font-size: 170%;
+        line-height: 50%;
+        color: white;
+    }
+    ::placeholder { /* different placeholder color */
+        color: rgb(245, 217, 176);
+        font-size: 70%;
+    }
+.listFooter{
+    background: rgb(236, 151, 23);
+    height: 10px;
+    width: 100%;
+    border-bottom-right-radius: 13px; 
+    border-bottom-left-radius: 8px; 
+}
+/* scrolling without scroll slider */
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    }
