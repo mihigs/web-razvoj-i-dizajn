@@ -10,10 +10,13 @@ var numbOfItemsOnList = 0;
 function initialise() {
     setTimeout(function () {
         $(".to-do-main-container").animate({
-            top: '0px'
-        }, 600, "easeOutExpo");
+            top: '0px',
+            // "border-top-right-radius": "15px",
+            // "border-bottom-right-radius": "13px",
+            // "border-bottom-left-radius": "8px",
+        }, 800, "easeOutExpo");
         setTimeout(showInputBlock, 90);
-    }, 600)
+    }, 400)
 }
 // makes input block pop out (55px from header)
 function showInputBlock() {
@@ -29,13 +32,20 @@ function startInput() {
     inputIsFocused = true;
 }
 //input form behavior on focus
+function widenInputField() {
+    $(".filler").stop();
+    $(".filler").animate({ height: "55px" }, 300, "easeOutQuad");
+    $(".to-do-input").stop();
+    $(".to-do-input").animate({ height: "55px" }, 300, "easeOutExpo");
+}
+$(".input-form").on("focus",function(){
+    widenInputField();
+})
 //automatically start input when typing
 $("body").on("keypress", function () {
     if (!inputIsFocused) {
         startInput();
-        $(".filler").animate({ height: "55px" }, 300, "easeOutQuad");
-        $(".to-do-input").animate({ height: "55px" }, 300, "easeOutExpo");
-        $(".item-content").first().css({ borderTopRightRadius: "0px" });
+        widenInputField();
     }
 })
 //input form behavior on lost focus (focusout)
@@ -44,7 +54,6 @@ $(".input-form").on("focusout", function () {
     $(".input-form").val("");
     $(".filler").animate({ height: "47px" }, 500, "easeOutExpo");
     $(".to-do-input").animate({ height: "47px" }, 500, "easeOutExpo");
-    $(".to-do-item").first().animate({ borderTopRightRadius: "10px" });
 });
 //adding a new item to the list
 function addNewItemToList() {
@@ -53,7 +62,7 @@ function addNewItemToList() {
         if (event.which == 13) {
             var userInput = $(".input-form").val();
             $(".input-form").val('');
-            $(".to-do-input").after('<div class="to-do-item block"></div>'); itemsOnHover();
+            $(".to-do-input").after('<div class="to-do-item block"></div>');
             $(".to-do-item").first().append('<div class="item-content"></div>');
             numbOfItemsOnList++;
             for (var i = numbOfItemsOnList; i > 1; i--) {
@@ -61,40 +70,87 @@ function addNewItemToList() {
             }
             $(".item-content").first().text(userInput);
             $(".to-do-item").first().append('<div class="item-delete-hover"></div>');
-            addDeleteButton();
             startInput();
             itemsOnHover();
+            addDeleteButton();
             clickDeleteButton();
+            markDone();
         }
     });
 }
 //items change color on mouse over
 function itemsOnHover() {
-    $(".item-content").hover(function () {
-        $(this).css("background-color", "lightgray");
-        $(this).siblings(".item-delete-hover").css("background-color", "lightgray")
+    $(".to-do-item").hover(function () {
+        $(this).children().addClass("to-do-item-hover");
     }, function () {
-        $(this).css("background-color", "white");
-        $(this).siblings(".item-delete-hover").css("background-color", "white")
+        $(this).children().removeClass("to-do-item-hover");
+    })
+}
+function doneItemsOnHover() {
+    $(".item-done").hover(function () {
+        $(this).children().addClass("item-done-hover");
+    }, function () {
+        $(this).children().removeClass("item-done-hover");
     })
 }
 //hover on the edge for item delete
-function addDeleteButton() {
-    $(".item-delete-hover").first().on("mouseenter", function () {
-        $(this).css("background","rgb(21, 38, 66)");
-        $(this).append('<div class="delete-icon"></div>');
-    })
-    $(".item-delete-hover").first().on("mouseleave", function () {
-        $(this).css("backgroundColor","white");
-        $(this).children().remove();
-    })
+function addDeleteButton(toLast = false) {
+    if (toLast) {
+        $(".item-delete-hover").last().hover(function () {
+            $(".delete-icon").remove();
+            $(this).append("<div class='delete-icon'</div>");
+        }, function () {
+            $(".delete-icon").remove();
+        });
+        return;
+    }
+    $(".item-delete-hover").first().hover(function () {
+        $(".delete-icon").remove();
+        $(this).append("<div class='delete-icon'</div>");
+    }, function () {
+        $(".delete-icon").remove();
+    });
+
 }
 //delete element on click
-function clickDeleteButton(){
-    $(".item-delete-hover").first().on("click",function(){
-        $(this).parent().animate({left: "-500px"},300,function(){
-            $(this).remove();
+function clickDeleteButton(toLast = false) {
+    if (toLast) {
+        $(".item-delete-hover").last().on("click", function () {
+            $(this).parent().animate({ left: "-500px" }, 300, function () {
+                $(this).animate({ height: "0px" }, 400, "easeOutExpo", function () {
+                    $(this).remove();
+                });
+            });
+            $(this).stop(true, true);
+        })
+        return;
+    }
+    $(".item-delete-hover").first().on("click", function () {
+        $(this).parent().animate({ left: "-500px" }, 300, function () {
+            $(this).animate({ height: "0px" }, 400, "easeOutExpo", function () {
+                $(this).remove();
+            });
         });
-        $(this).stop(true,true);
+        $(this).stop(true, true);
     })
 }
+//items marked done on click
+function markDone() {
+    var inputValue;
+    $(".item-content").first().on("click", function () {
+        $(this).parent().animate({ left: "-500px" }, 300, function () {
+            $(this).animate({ height: "0px" }, 400, "easeOutExpo", function () {
+                $(this).remove();
+            });
+        });
+        inputValue = $(this).text();
+        $(".listFooter").before($('<div class="item-done block"><div class="item-content"></div><div class="item-delete-hover"></div></div>'));
+        $(".item-done .item-content").last().text(inputValue);
+        $(".item-done .item-content").last().addClass("marked-done");
+        addDeleteButton(true);
+        clickDeleteButton(true);
+        doneItemsOnHover();
+
+    })
+}
+

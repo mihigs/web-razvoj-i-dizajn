@@ -14,20 +14,21 @@ input:focus{
 
 /* containers */
 .main-container{
+    background: gray;
     display:flex;
     flex-direction: row;
     justify-content: center;
     padding: 5% 0;
     width: 100%;
     height: 950px;
-    background: rgb(21, 38, 66);
 }
 
 .to-do-list{
     position: relative;    
 }
 
-.to-do-main-container{
+.to-do-main-container{    
+    background: rgb(236, 151, 23);  
     display: flex;
     position: relative;
     top: 44%;
@@ -44,14 +45,13 @@ input:focus{
     border-radius: 1px;
 }
 .filler{
-    background: rgb(21, 38, 66);
+    background: rgb(236, 151, 23);  
     display: block;
 }
 .to-do-header{
     background: rgb(236, 151, 23);
     color: white;
     padding: 2% 5%;
-    border-top-right-radius: 15px;
     z-index: 3;
 }
     h2{
@@ -66,13 +66,16 @@ input:focus{
 
 .to-do-item{
     position: relative;
-    background: rgb(21, 38, 66);
     width: 100%;
-    z-index: 2;
+    z-index: 3;
+    background: rgb(21, 38, 66);
 }
+    .to-do-item-hover{
+        background: rgb(29, 46, 74) !important;
+    }
     .item-content{
         float: left;
-        background: white;
+        color: white;
         width: 85%;
         height: 100%;
         font-size: 130%;
@@ -82,18 +85,31 @@ input:focus{
         float: right;
         width: 15%;
         height: 55px;
-        background: white;
         z-index: 2;
     }
-    .delete-icon{
-        margin: auto;
-        margin-top: 17px;
-        height: 19px;
-        width: 17px;
-        background: url("trashcan-delete.png");
-        background-size: cover;
-        z-index: 3;
+        .delete-icon{
+            margin: auto;
+            margin-top: 17px;
+            height: 19px;
+            width: 17px;
+            background: url("trashcan-delete-hover.png");
+            background-size: cover;
+            z-index: 3;
+        }
+    .item-done{
+            position: relative;
+            z-index: 4; 
+            text-decoration: line-through;
+            color: gray;
+            background: rgb(22,22,22); 
     }
+        .marked-done{
+            text-decoration: line-through;
+            color: gray;
+        }
+        .item-done-hover{
+            background: rgb(30,30,30) !important; 
+        }
 .to-do-input{
     position: absolute;
     top: 0;
@@ -110,14 +126,11 @@ input:focus{
     }
     ::placeholder { /* different placeholder color */
         color: rgb(245, 217, 176);
-        font-size: 70%;
     }
 .listFooter{
     background: rgb(236, 151, 23);
     height: 10px;
-    width: 100%;
-    border-bottom-right-radius: 13px; 
-    border-bottom-left-radius: 8px; 
+    width: 100%; 
 }
 /* scrolling without scroll slider */
 ::-webkit-scrollbar {
