@@ -1,0 +1,14 @@
+1. create class Vehicle with props hasEngine, isElectric, canDrive,
+capacity, isRunning, mileage and drive method that takes in amount
+of kilometers
+2. create Car and Bike classes that extend Vehicle and set doorNumber
+accordingly. add tireNumber as props
+3. add carStart, carStop, bikeStart, bikeStop accordingly
+4. instantiate batMobile, batBike and flintstonesCar
+exercise
+5. drive them around (start engine, drive, stop engine)
+6. every car should go to Garage if it has mileage above 200
+ 7. make Garage class that has queue (array of cars), addVehicle,
+removeVehicle, checkVehicles and fixVehicle method that decreases
+mileage by 20km.
+Only vehicles that have mileage below 100 are fixed!!

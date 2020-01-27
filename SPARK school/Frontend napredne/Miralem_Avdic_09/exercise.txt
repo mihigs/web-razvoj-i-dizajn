@@ -1,0 +1,1 @@
+Goal of the exercise is to learn how to export and import modules

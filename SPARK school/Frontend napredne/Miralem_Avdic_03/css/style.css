@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+.drop-zone {
+	height: 400px;
+	width: 400px;
+	background: teal;
+	color: white;
+	text-align: center;
+	line-height: 150%;
+	padding-top: 15%;
+	border: 2px solid black;
+	font-weight: bold;
+	font-size: 130%;
+}
+.highlighted {
+	border: 2px solid green;
+	background: blue;
+}

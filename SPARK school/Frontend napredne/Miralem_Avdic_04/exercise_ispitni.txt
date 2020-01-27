@@ -1,0 +1,44 @@
+1. zadatak (100 bodova)
+Programski generiraj formular sa tri input polja i dva gumba('Reset', 'Submit'). (10 bodova)
+Prvi input sluzi za unos Username-a i mora ispunjavati sljedece uvjete:
+- minimalno 5 znakova, maksimalno 16 (5 bodova)
+- nedopusten unos ikakvih znakova osim slova i brojeva (10 bodova)
+Drugi input sluzi za unos Password-a i mora ispunjavati sljedece uvjete:
+- minimalno 5 znakova, maksimalno 16 (5 bodova ako je koristena ista funkcija kao u prethodnom input-u)
+- minimalno jedno veliko slovo, jedan dijakriticki znak i jedan broj (15 bodova)
+Trece input sluzi za unost Repeat Password-a i mora ispunjavati sljedece uvjete:
+- unos mora biti identican prijasnjem unosu (10 bodova)
+Prilikom unosa, dok neki od uvjeta za određeni input nije zadovoljen, input mora imati crvenu boju obruba. (10 bodova)
+Ako je za određeni input svaku uvjet zadovoljen, input mora imati zelenu boju obruba. (10 bodova)
+Između svih input polja i button elemenata se mora prikazati poruka spomenuta u narednim zadatcima:
+Prilikom pritiska na gumb Reset, ukloni/resetiraj vrijednost svakog input polja i prikazi poruku 'Successfully reseted'. (5 bodova)
+Prilikom pritiska na gumb Submit, ako validacija/uvjeti na input-ima nisu zadovoljeni, prikazi poruku 'Invalid input'. (5 bodova)
+Prilikom pritiska na gumb Submit, ako je validacija ispunjena, prikazi poruku 'Form data sent'. (5 bodova)
+
+2.  zadatak (80 bodova)
+Koristeći isključivo HTML napravi tri buttona ('Generate', 'Colorize', 'Remove'). (5 bodova)
+Ostatak zadataka koristimo isključivo JavaScript:
+Pritiskom na Generate izgeneriraj listu sa nasumicnim brojem podataka (maks. 10). (10 bodova)
+Svaki od napravljenih itema mora biti numeriran od 1 pa nadalje. (5 bodova).
+Drugom elementu u listi nadodaj anchor element koji vodi na google.com u novom tabu. (5 bodova)
+Predzadnjem elementu nadodaj anchor element koji vodi na facebook.com u novom tabu, ali anchor tag postavi unutar shadow DOM-a tog elementa liste. (10 bodova)
+Prilikom prelaska mišem preko jednog od elemenata, promijeni mu boju u svijetlo sivu. Ako je miš napustio element, ukloni tu boju. (isključivo JS) (10 bodova)
+Svaki pritisak na Generate mora izgenerirati novu lisu sa istim gore navedenim uvjetima. (10 bodova)
+Pritisak na buttone Colorize ili Remove aktivira funkcionalnost jednog od tih buttona za ostatak zadatka: (5 bodova)
+Dok je aktivan Colorize:
+Pritisak misa na bilo koji item u listi mu daje neku nasumičnu boju obruba. (10 bodova)
+Dok je aktivan Remove:
+Pritisak misa na bilo koji item u listi uklanja element iz liste. (10 bodova)
+
+DODATNI ZADATAK:
+Programski generiraj #dropzone element na koji mozes drag & dropat bilo kojeg itema iz liste iz prethodnog zadatka. (maks 20 bodova)
+
+Pridrzavanje ili ne pridrzavanje moze nadodati (+20) ili ukloniti (-10) dodatnih bodova.
+
+Inteligentnim korištenjem event delegacije u bilo kojem od zadataka možete ostvariti dodatnih 20 bodova.
+
+BROJ BODOVA: 180
+BROJ MOGUĆIH DODATNIH BODOVA: 60
+SVEUKUPNI BROJ BODOVA: 240
+
+Za prolazak na testu morate ostvariti minimalno 100 bodova.

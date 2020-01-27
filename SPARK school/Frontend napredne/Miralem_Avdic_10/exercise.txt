@@ -1,0 +1,13 @@
+1. create the constructor function for a Video object. The function
+should take in arguments of title (a string), uploader (a string, the
+person who uploaded it), and seconds (a number, the duration), and it
+should save them as properties of the object.
+2. create a method on the Video object called watch(). When that
+method is called, it should use console.log to output a string like "You
+watched all 60 seconds of Otters Holding Hands!"
+3. Instantiate a new Video object and call the watch() method on it.
+4. Instantiate another Video object with different constructor
+arguments.
+5. bonus: use an array of data to instantiate 5 Video objects.
+6. bonus: make the watch method accept amounts of seconds to watch
+for, and call it with different amounts of seconds.

@@ -1,0 +1,1 @@
+Play around creating elements in javascript, adding them to other elements, removing them, editing them etc.

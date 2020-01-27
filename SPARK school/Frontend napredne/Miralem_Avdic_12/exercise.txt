@@ -1,0 +1,33 @@
+// EVERY CLASS MUST HAVE ITS OWN FILE AND BE LOCATED IN helpers/ FOLDER
+
+/**
+ * create Human class that has
+ *   properties:
+ *     - sex
+ *     - height
+ *     - mass
+ *     - age
+ *     - name
+ *   methods:
+ *     - sayHi (prints to console "Hi, I'm <human_name> and I have <human_age>")
+ *
+ * create Teacher class that extends Human
+ *   properties:
+ *     - subject
+ *   methods:
+ *     - quizStudent (takes in student and grade. Finds the subject by name from the list of subjects on student and sets the grade)
+ *
+ * create Student class that extends Human
+ *   properties:
+ *     - schoolSubjects
+ *   methods:
+ *     - addSubject (adds subject object to schoolSubjects array),
+ *     - isFailing (check if any grade is below 2)
+ *     - passingGrade (rounds average value of all grades).
+ *
+ * initialize math and history teachers and one student.
+ * add 2 subjects to the student {name: 'math', grade: null} and {name: 'history', grade: null}
+ * call sayHi from all teachers and student
+ * call quizStudent from math and history and set grades to 2 and 5
+ * call isFailing from student, if student is not failing call passingGrade
+ */
